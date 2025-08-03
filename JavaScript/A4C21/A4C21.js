@@ -10,7 +10,6 @@ This challenge tests your ability to design clean data structures, implement eff
 
 
 */
-// A4C21.js
 
 
 function buildGraph(users) {
