@@ -26,6 +26,8 @@ This repository contains a collection of hackathon-style coding challenges inspi
 | C++          | ![C++](https://img.shields.io/badge/C++-00599C?logo=c%2B%2B&logoColor=white) |
 | Go           | ![Go](https://img.shields.io/badge/Go-00ADD8?logo=go&logoColor=white) |
 
+### And Other Languages... If you want to do a collab make a Pull Request or dm me on X: "StrawyDev"
+
 ---
 
 ## Structure
