@@ -64,7 +64,7 @@ func scheduleEVsAdvanced(evs []EV, slots int) (map[int][]string, bool) {
 	}
 
 	// Map to store which EVs are scheduled at which time slot
-	schedule := make(map[int][]string)
+	schedule := make(map[int][]strng)
 	usedSlots := make(map[int]int)
 
 	for h.Len() > 0 {

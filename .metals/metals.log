@@ -1,0 +1,258 @@
+2026.02.04 20:20:37 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+Feb 04, 2026 8:20:37 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "textDocument/didOpen",
+  "params": {
+    "textDocument": {
+      "uri": "file:///e%3A/pruebas/Hackathons-Practice/Java/AM017/AM017.java",
+      "languageId": "java",
+      "version": 1,
+      "text": ""
+    }
+  }
+}
+java.lang.IllegalStateException: An unexpected exception occurred while executing jsonrpc method public abstract java.util.concurrent.CompletableFuture scala.meta.metals.lsp.TextDocumentService.didOpen(org.eclipse.lsp4j.DidOpenTextDocumentParams)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:73)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:160)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:231)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:198)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.nio.file.NoSuchFileException: e:\pruebas\Hackathons-Practice\Java\AM017\AM017.java
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:234)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:379)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:431)
+	at java.base/java.nio.file.Files.readAllBytes(Files.java:3268)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:38)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:18)
+	at scala.meta.internal.metals.MetalsLspService.didOpen(MetalsLspService.scala:756)
+	at scala.meta.internal.metals.WorkspaceLspService.didOpen(WorkspaceLspService.scala:476)
+	at scala.meta.metals.lsp.DelegatingScalaService.didOpen(DelegatingScalaService.scala:38)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	... 11 more
+
+2026.02.04 20:20:37 INFO  no build target found for e:\pruebas\Hackathons-Practice\Java\AM017\AM017.java. Using fallback presentation compiler.
+Feb 04, 2026 8:20:37 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "textDocument/didSave",
+  "params": {
+    "textDocument": {
+      "uri": "file:///e%3A/pruebas/Hackathons-Practice/Java/AM017/AM017.java"
+    }
+  }
+}
+java.lang.IllegalStateException: An unexpected exception occurred while executing jsonrpc method public abstract java.util.concurrent.CompletableFuture scala.meta.metals.lsp.TextDocumentService.didSave(org.eclipse.lsp4j.DidSaveTextDocumentParams)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:73)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:160)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:231)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:198)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.nio.file.NoSuchFileException: e:\pruebas\Hackathons-Practice\Java\AM017\AM017.java
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:234)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:379)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:431)
+	at java.base/java.nio.file.Files.readAllBytes(Files.java:3268)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:38)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:18)
+	at scala.meta.internal.metals.MetalsLspService.$anonfun$onChange$1(MetalsLspService.scala:930)
+	at scala.collection.immutable.List.map(List.scala:236)
+	at scala.collection.immutable.List.map(List.scala:79)
+	at scala.meta.internal.metals.MetalsLspService.onChange(MetalsLspService.scala:929)
+	at scala.meta.internal.metals.ProjectMetalsLspService.onChange(ProjectMetalsLspService.scala:331)
+	at scala.meta.internal.metals.MetalsLspService.didSave(MetalsLspService.scala:882)
+	at scala.meta.internal.metals.ProjectMetalsLspService.didSave(ProjectMetalsLspService.scala:320)
+	at scala.meta.internal.metals.WorkspaceLspService.didSave(WorkspaceLspService.scala:506)
+	at scala.meta.metals.lsp.DelegatingScalaService.didSave(DelegatingScalaService.scala:53)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	... 11 more
+
+2026.02.04 20:20:37 INFO  no build target found for e:\pruebas\Hackathons-Practice\Java\AM017\AM017.java. Using fallback presentation compiler.
+2026.02.04 20:20:38 WARN  no build tool detected in workspace 'E:\pruebas\Hackathons-Practice'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2026.02.04 20:20:38 WARN  Build server is not auto-connectable.
+2026.02.04 20:20:38 WARN  no build target for: E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java
+2026.02.04 20:21:38 WARN  no build target for: E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java
+2026.02.04 20:21:38 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:38 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:38 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:38 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:41 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:41 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:41 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:43 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:43 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:43 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:43 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:43 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:45 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+Feb 04, 2026 8:21:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 25
+2026.02.04 20:21:47 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:48 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:48 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:48 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:48 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:49 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:49 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:49 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:49 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:49 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:49 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:49 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:51 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:51 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:51 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:52 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:52 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:52 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:52 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:52 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:52 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:52 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:52 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:53 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:53 WARN  no build target for: E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java
+2026.02.04 20:21:54 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:58 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:58 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:59 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:59 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:21:59 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:00 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:00 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:00 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:01 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:01 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:01 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:01 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:01 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:01 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:01 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:02 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:02 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:02 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:02 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:02 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:03 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:03 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:03 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:03 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:03 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:04 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:04 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:04 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:04 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:04 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:06 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:06 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:06 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:06 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:07 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:07 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:07 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:07 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:07 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:07 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:09 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:09 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+Feb 04, 2026 8:22:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 159
+2026.02.04 20:22:09 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:09 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:10 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:10 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:10 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:10 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:10 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:10 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:10 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:11 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:22:12 WARN  no build target for: E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java
+2026.02.04 20:23:42 WARN  no build target for: E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java
+2026.02.04 20:23:42 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:23:42 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:23:42 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+Feb 04, 2026 8:24:38 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 04, 2026 8:24:43 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 04, 2026 8:32:57 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 04, 2026 8:33:15 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.02.04 20:34:03 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AM017\AmazonInventorySync.java. Using fallback presentation compiler.
+2026.02.04 20:46:11 WARN  no build target for: E:\pruebas\Hackathons-Practice\Java\OR045\OR045.java
+2026.02.04 20:46:11 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\OR045\OR045.java. Using fallback presentation compiler.
+2026.02.04 20:46:11 WARN  no build target for: E:\pruebas\Hackathons-Practice\Java\OR045\OR045.java
+2026.02.04 20:46:11 WARN  Running javac-semanticdb failed for file:///E:/pruebas/Hackathons-Practice/Java/OR045/OR045.java. Output:
+
+2026.02.04 20:46:11 WARN  no build target for: E:\pruebas\Hackathons-Practice\Java\OR045\OracleTransactionSimulator.java
+2026.02.04 20:46:11 INFO  no build target found for e:\pruebas\Hackathons-Practice\Java\OR045\OR045.java. Using fallback presentation compiler.
+2026.02.04 20:46:16 WARN  no build target for: E:\pruebas\Hackathons-Practice\Java\LI046\LI046.java
+2026.02.04 20:46:16 WARN  Running javac-semanticdb failed for file:///E:/pruebas/Hackathons-Practice/Java/LI046/LI046.java. Output:
+
+2026.02.04 20:46:16 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\LI046\LI046.java. Using fallback presentation compiler.
+2026.02.04 20:46:16 WARN  no build target for: E:\pruebas\Hackathons-Practice\Java\LI046\LI046.java
+2026.02.04 20:46:16 INFO  no build target found for e:\pruebas\Hackathons-Practice\Java\LI046\LI046.java. Using fallback presentation compiler.
+2026.02.04 20:46:16 WARN  no build target for: E:\pruebas\Hackathons-Practice\Java\LI046\LinkedInConnections.java
+2026.02.04 20:46:19 WARN  no build target for: E:\pruebas\Hackathons-Practice\Java\MC047\MC047.java
+2026.02.04 20:46:19 WARN  Running javac-semanticdb failed for file:///E:/pruebas/Hackathons-Practice/Java/MC047/MC047.java. Output:
+
+2026.02.04 20:46:19 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\MC047\MC047.java. Using fallback presentation compiler.
+2026.02.04 20:46:19 WARN  no build target for: E:\pruebas\Hackathons-Practice\Java\MC047\MC047.java
+2026.02.04 20:46:19 WARN  no build target for: E:\pruebas\Hackathons-Practice\Java\MC047\MinecraftCrafting.java
+2026.02.04 20:46:19 INFO  no build target found for e:\pruebas\Hackathons-Practice\Java\MC047\MC047.java. Using fallback presentation compiler.
+2026.02.04 20:46:22 WARN  no build target for: E:\pruebas\Hackathons-Practice\Java\AD048\AD048.java
+2026.02.04 20:46:22 WARN  Running javac-semanticdb failed for file:///E:/pruebas/Hackathons-Practice/Java/AD048/AD048.java. Output:
+
+2026.02.04 20:46:22 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AD048\AD048.java. Using fallback presentation compiler.
+2026.02.04 20:46:22 WARN  no build target for: E:\pruebas\Hackathons-Practice\Java\AD048\AD048.java
+2026.02.04 20:46:22 WARN  no build target for: E:\pruebas\Hackathons-Practice\Java\AD048\AndroidPermissionChecker.java
+2026.02.04 20:46:22 INFO  no build target found for e:\pruebas\Hackathons-Practice\Java\AD048\AD048.java. Using fallback presentation compiler.
+2026.02.04 20:46:23 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AD048\AndroidPermissionChecker.java. Using fallback presentation compiler.
+2026.02.04 20:46:23 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AD048\AndroidPermissionChecker.java. Using fallback presentation compiler.
+2026.02.04 20:46:23 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AD048\AndroidPermissionChecker.java. Using fallback presentation compiler.
+2026.02.04 20:46:23 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AD048\AndroidPermissionChecker.java. Using fallback presentation compiler.
+2026.02.04 20:46:23 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AD048\AndroidPermissionChecker.java. Using fallback presentation compiler.
+2026.02.04 20:46:23 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AD048\AndroidPermissionChecker.java. Using fallback presentation compiler.
+2026.02.04 20:46:23 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AD048\AndroidPermissionChecker.java. Using fallback presentation compiler.
+2026.02.04 20:46:23 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AD048\AndroidPermissionChecker.java. Using fallback presentation compiler.
+2026.02.04 20:46:23 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AD048\AndroidPermissionChecker.java. Using fallback presentation compiler.
+2026.02.04 20:46:23 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AD048\AndroidPermissionChecker.java. Using fallback presentation compiler.
+2026.02.04 20:46:23 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AD048\AndroidPermissionChecker.java. Using fallback presentation compiler.
+2026.02.04 20:46:23 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AD048\AndroidPermissionChecker.java. Using fallback presentation compiler.
+2026.02.04 20:46:24 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AD048\AndroidPermissionChecker.java. Using fallback presentation compiler.
+2026.02.04 20:46:24 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AD048\AndroidPermissionChecker.java. Using fallback presentation compiler.
+2026.02.04 20:46:26 WARN  no build target for: E:\pruebas\Hackathons-Practice\Java\BA049\BA049.java
+2026.02.04 20:46:26 WARN  Running javac-semanticdb failed for file:///E:/pruebas/Hackathons-Practice/Java/BA049/BA049.java. Output:
+
+2026.02.04 20:46:26 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\BA049\BA049.java. Using fallback presentation compiler.
+2026.02.04 20:46:26 WARN  no build target for: E:\pruebas\Hackathons-Practice\Java\BA049\BA049.java
+2026.02.04 20:46:26 INFO  no build target found for e:\pruebas\Hackathons-Practice\Java\BA049\BA049.java. Using fallback presentation compiler.
+2026.02.04 20:46:26 WARN  no build target for: E:\pruebas\Hackathons-Practice\Java\BA049\BoAInterestCalculator.java
+2026.02.04 20:46:27 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AD048\AndroidPermissionChecker.java. Using fallback presentation compiler.
+2026.02.04 20:46:28 INFO  no build target found for E:\pruebas\Hackathons-Practice\Java\AD048\AndroidPermissionChecker.java. Using fallback presentation compiler.
